@@ -1,6 +1,6 @@
 # Camera Cover Monitor
 
-## Exlain:
+## Explain:
 This script takes a picture via Web Camera and notify if physical cover isn't on, by analize picture saturation (dark area)
 
 ## Use
