@@ -7,7 +7,8 @@ saturation_max = 20
 def pop_up(text):
     pop_up_root = Tk()
     pop_up_root.withdraw()
-    showinfo(title="camera alert", message=text)
+    pop_up_root.attributes("-topmost", True)
+    showinfo(title="camera alert", message=text, parent=pop_up_root)
     pop_up_root.destroy()
 
 try:
