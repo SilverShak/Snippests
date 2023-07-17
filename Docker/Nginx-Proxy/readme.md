@@ -1,11 +1,11 @@
 # Nginx-Proxy
 
-Nginx container with Proxy to other containers that are not exposed directly, using the same IP and Port
+Composer solution to use NGINX for routing HTTP Request to other containers that do not have port forwarding.
 
 
 ## Run
 
-docker compose up
+```docker compose up```
 
 ## Test
 
@@ -26,4 +26,4 @@ Add or edit HTML files in each container src/html directory
 If changed services names in compose.yml file, change it accordinly in nginx/src/nginx.conf, in each location under proxy_pass
 
 ## Tear down
-docker compose down -v --rmi all
+```docker compose down -v --rmi all```
