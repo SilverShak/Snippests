@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  proxy:
+    image: nginx:latest
+    ports:
+      - 80:80
+    volumes:
+      - ./nginx/src/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./nginx/src/html:/etc/nginx/html
+
+  web1:
+    image: httpd
+    volumes:
+      - ./web1/src/htdocs:/usr/local/apache2/htdocs
+
+  web2:
+    image: httpd
+    volumes:
+      - ./web2/src/htdocs:/usr/local/apache2/htdocs
