@@ -12,9 +12,9 @@ services:
   web1:
     image: httpd
     volumes:
-      - ./web1/src/htdocs:/usr/local/apache2/htdocs
+      - ./web1/src/html:/usr/local/apache2/htdocs
 
   web2:
     image: httpd
     volumes:
-      - ./web2/src/htdocs:/usr/local/apache2/htdocs
+      - ./web2/src/html:/usr/local/apache2/htdocs
