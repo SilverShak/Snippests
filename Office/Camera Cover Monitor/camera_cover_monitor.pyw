@@ -14,10 +14,11 @@ def pop_up(text):
 try:
 
     # capture media from camera
-    cap = cv2.VideoCapture(0)
+    capture = cv2.VideoCapture(0)
 
     # extract frame
-    image = cap.read()[1]
+    image = capture.read()[1]
+    capture.release()
 
     #if camera is unavailable
     if image is None:
